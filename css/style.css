@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Kumbh+Sans&display=swap');
+/*clear default browser styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg-colr:hsl(204, 43%, 93%);
+    --yellow: hsl(71, 73%, 54%);
+    --text-color: hsl(204, 43%, 93%);
+    --cyan: hsl(179, 62%, 43%);
+    --whybg: hsl(179, 62%, 45%);
+    --paddingX: 1.8rem;
+    --paddingY: 1.5rem;
+    --grayishblue: hsl(218, 22%, 67%);
+}
+html{
+    line-height: 1.4;
+}
+body{
+
+    font-family: 'Karla', sans-serif;
+    background-color: var(--main-bg-colr);
+    font-weight: 400;
+    padding: var(--paddingX);
+}
+.container{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.price{
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 40rem;
+    margin:0 auto;
+
+}
+@media only screen and (min-width: 50.5em) {
+    .price{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    .community{
+        grid-column: 1 / 3;
+    }
+}
+
+.price> * {
+    padding: var(--paddingX) var(--paddingY);
+}
+.community{
+    background-color: white;
+
+
+}
+.community >h2{
+    font-weight: 700;
+    color: var(--cyan);
+    font-size: 1.45rem;
+    margin-top: -12px;
+}
+
+.community >h3{
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+.community >p{
+
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--grayishblue);
+}
+
+.subscription{
+    background-color: var(--cyan);
+}
+.subscription>h3{
+    color: white;
+    margin-top: -12px;
+    font-size: 1.14rem;
+}
+
+.subscription>p{
+    color: white;
+    font-weight: 400;
+    font-size: 0.81rem;
+    margin-bottom: 1.5rem;
+}
+.sub-price{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+
+}
+
+.sub-price>span{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 0.8rem;
+}
+
+a{
+
+
+    border-radius: 2px;
+    text-decoration: none;
+
+}
+.subscription >a{
+    display: block;
+    color: white;
+    background-color: var(--yellow);
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 400;
+    box-shadow: 0 0.5rem 1rem rgba(0 ,0, 0,0.15);
+}
+
+.why{
+    background-color: var(--whybg);
+
+}
+.why>h3{
+    color: white;
+
+}
+.why>ul{
+    color: white;
+}
+.why>ul>li{
+    list-style: none;
+    font-size: 0.85rem;
+    margin-bottom: 0.08rem;
+}
+
